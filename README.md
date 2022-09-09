@@ -29,9 +29,9 @@ it is possible download files from web just passing the file url and the `-u` fl
 ## uninstall:
 ```txt
 cd depInstaller
-make install
+make remove
 ```
-the command will be removed from `/usr/bin/` directory.
+the file will be removed from `/usr/bin/` directory.
 
 ## author 
 <img width='100' height='100' style="border-radius:50%; padding:15px" src="https://avatars.githubusercontent.com/u/78698099?v=4" /></br>
