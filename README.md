@@ -1,9 +1,8 @@
 # depInstaller
 
-a simple dependencies installer and easy to use.  
+a simple dependencies installer and easy to use.
 
 ## installation:
-it's only compatible with `fedora` and `manjaro`.
 ```txt
 git clone https://github.com/lipe14-ops/depInstaller
 cd depInstaller
@@ -33,7 +32,7 @@ make remove
 ```
 the file will be removed from `/usr/bin/` directory.
 
-## author 
+## author
 <img width='100' height='100' style="border-radius:50%; padding:15px" src="https://avatars.githubusercontent.com/u/78698099?v=4" /></br>
 <a href="https://github.com/lipe14-ops" style='padding: 15px' title="Rocketseat">Filipe Soares :computer:</a>
 <p style='padding: 15px'>made with :heart: by <strong>Filipe</strong> :wave: reach me!!!</p>

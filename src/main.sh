@@ -3,8 +3,16 @@
 myOs=$(cat /etc/os-release | grep -E "^ID=[a-z]{1,}")
 
 declare -A osInstallers=(
-    ["ID=fedora"]="dnf install"
-    ["ID=manjaro"]="yay -S"
+    ["ID=fedora"]="dnf -y install"
+    ["ID=manjaro"]="yay --noconfirm -S"
+    ["ID=arch"]="yay --noconfirm -S"
+    ["ID=elementary"]="apt -y install"
+    ["ID=kali"]="apt -y install"
+    ["ID=raspbian"]="apt -y install"
+    ["ID=zorin"]="apt -y install"
+    ["ID=debian"]="yes | dpkg -i"
+    ["ID=linuxmint"]="yes | dpkg -i"
+    ["ID=opensuse"]="zypper --non-interactive install"
 )
 
 installer="${osInstallers[$myOs]}"
@@ -23,6 +31,6 @@ while read -r line; do
     parameter=$(echo $line | grep -Po "[a-zA-Z0-9]{1,}$")
 
     if [[ $command == "INSTALL" ]]; then
-        eval "yes | $installer $parameter"
+        eval "$installer $parameter"
     fi
 done <<< $content
