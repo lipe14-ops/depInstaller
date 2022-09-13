@@ -1,6 +1,10 @@
 FILE = ./src/main.sh
 LINK_NAME = depinstaller
 
+all: install
+
+reinstall: remove install
+
 install: link_file
 	chmod +x ./$(LINK_NAME)
 	mv ./$(LINK_NAME) /usr/bin

@@ -8,22 +8,29 @@ git clone https://github.com/lipe14-ops/depInstaller
 cd depInstaller
 make install
 ```
+or for reinstallation:
+```txt
+cd depInstaller
+make reinstall
+```
+
 ## usage:
 first you need to create a `.deps` file. and write the command and your dependency name on it. Example:
 
 ```txt
+RUN echo "hello, world!!!"
+UPDATESYS
 INSTALL discord
-INSTALL spotify
+REMOVE vim
 INSTALL obs-studio
 INSTALL nodejs
 INSTALL npm
 INSTALL pip
 INSTALL neovim
-INSTALL vim
 ```
-run the following command `depinstaller -f <FILENAME>` and all you dependencies will be installed.
-
-it is possible download files from web just passing the file url and the `-u` flag. Example: `depinstaller -u www.url.com`
+run the following command `depinstaller -f <FILENAME>` and all you dependencies will be handled.
+It is possible handle dependencies from web just passing the file url and the `-u` flag. Example: `depinstaller -u www.url.com`.
+To more details run the command `depinstaller -h`.
 
 ## uninstall:
 ```txt
