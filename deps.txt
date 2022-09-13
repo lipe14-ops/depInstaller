@@ -1,0 +1,12 @@
+RUN echo "hello, world"
+UPDATESYS
+INSTALL discord
+INSTALL spotify
+INSTALL obs-studio
+INSTALL sptlrx
+INSTALL nodejs
+INSTALL npm
+INSTALL neovim
+INSTALL code
+INSTALL code-marketplace
+REMOVE vim

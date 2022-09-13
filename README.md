@@ -15,7 +15,7 @@ make reinstall
 ```
 
 ## usage:
-first you need to create a `.deps` file. and write the command and your dependency name on it. Example:
+first you need to create a `deps.txt` file. and write the command and your dependency name on it. Example:
 
 ```txt
 RUN echo "hello, world!!!"
@@ -28,8 +28,8 @@ INSTALL npm
 INSTALL pip
 INSTALL neovim
 ```
-run the following command `depinstaller -f <FILENAME>` and all you dependencies will be handled.
-It is possible handle dependencies from web just passing the file url and the `-u` flag. Example: `depinstaller -u www.url.com`.
+run the following command `depinstaller -f <FILENAME>` and all your dependencies will be handled.
+
 To more details run the command `depinstaller -h`.
 
 ## uninstall:

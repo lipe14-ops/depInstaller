@@ -4,18 +4,22 @@ if [[ $1 == "-f" ]]; then
     content=$(cat $2)
 elif [[ $1 == "-u" ]]; then
     content=$(curl $2)
+elif [[ $1 == "-g" ]]; then
+    url=$(echo $2 | sed "s|github.com|raw.githubusercontent.com|g")
+    content=$(curl "$url/$3/deps.txt")
 elif [[ $1 == "-h" ]]; then
-    echo "    COMMAND FLAGS                    USAGE"
+    echo "    COMMAND FLAGS                              USAGE"
     echo
-    echo "    depinstaller -f <FILE NAME>      installs dependencies listed on file."
-    echo "    depinstaller -u <FILE URL>       installs dependencies listed on url."
+    echo "    depinstaller -f <FILENAME>                 installs dependencies listed on file."
+    echo "    depinstaller -u <FILE URL>                 installs dependencies listed on url."
+    echo "    depinstaller -g <GITHUB REPO URL> <BRANCH> installs dependencies from github."
     echo
-    echo "    DEPENDECY FILES COMANDS          USAGE"
+    echo "    DEPENDENCY FILES COMANDS                   USAGE"
     echo
-    echo "    INSTALL   <DEPENDENCY NAME>      installs a dependency."
-    echo "    REMOVE    <DEPENDENCY NAME>      uninstalls a dependency."
-    echo "    RUN       <COMMAND>              runs a command."
-    echo "    UPDATESYS                        updates the OS."
+    echo "    INSTALL   <DEPENDENCY NAME>                installs a dependency."
+    echo "    REMOVE    <DEPENDENCY NAME>                uninstalls a dependency."
+    echo "    RUN       <COMMAND>                        runs a command."
+    echo "    UPDATESYS                                  updates the OS."
     exit 0
 else
     echo "[FLAG ERROR] use the command \"depinstaller -h\" to get help."
