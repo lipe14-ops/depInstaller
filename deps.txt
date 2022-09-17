@@ -1,9 +1,44 @@
-RUN echo "hello, world!!!"
 UPDATESYS
+
+INSTALL docker
+INSTALL neofetch
+INSTALL net-tools
+INSTALL nmap
+INSTALL netcat
+INSTALL zip
+INSTALL unzip
+INSTALL steam
+INSTALL lolcat
+INSTALL picom
+INSTALL cmatrix
+INSTALL avrdude
+INSTALL avr-gcc
 INSTALL discord
-REMOVE vim
+INSTALL spotify
+INSTALL code
+INSTALL code-marketplace
+INSTALL chromium
 INSTALL obs-studio
 INSTALL nodejs
 INSTALL npm
-INSTALL pip
+INSTALL util-linux
 INSTALL neovim
+INSTALL vim
+INSTALL ranger
+INSTALL lutris
+INSTALL wine
+INSTALL git
+INSTALL mongodb
+INSTALL mysql
+INSTALL mariadb
+INSTALL cava
+INSTALL rofi
+INSTALL zsh
+INSTALL nginx
+INSTALL virtualbox
+INSTALL kdeconnect
+INSTALL alacritty
+
+RUN chsh -s $(which zsh)
+#RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+#RUN reboot
